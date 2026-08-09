@@ -48,4 +48,4 @@ judgment before I have OT hardware access.
   in any change to the environment.
 
 ## Screenshots
-[diagram.png, packet-tracer-topology.png]
+[https://github.com/carmelin-neto/ot-purdue-model-mapping/blob/main/screenshots/purdue-model-oilgas..drawio.png, packet-tracer-topology.png]
