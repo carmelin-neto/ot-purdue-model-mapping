@@ -35,10 +35,9 @@ judgment before I have OT hardware access.
    segmentation and ACLs enforcing the Level 3.5 DMZ boundary.
 
 ## Findings / Key Design Decisions
-- [Document your actual reasoning here once built — e.g., "I placed the 
-  historian in the DMZ rather than Level 3 because it needs to pull data 
-  from OT while being queried by IT, making it the highest-risk 
-  single point if compromised."]
+- The Level 3.5 Industrial DMZ enforces a strict one-way data flow: Level 3 (OT) pushes replicated data out to the DMZ, and Level 4 (IT) retrieves it from there — the two levels never open a direct session with each other. The critical design choice isn't just that OT can push out, but that the DMZ is never permitted to push into OT. If the DMZ could initiate a connection back into the control network, that would require an access point on the OT side for it to connect through — and that access point is exactly what an attacker would need. Because that access point simply doesn't exist, even a fully compromised DMZ leaves an attacker with nowhere further to go: no path, no way in.
+
+Without this boundary, the IT/OT line disappears entirely. A single phishing click on the corporate network becomes the starting point for an attacker to move straight across into the control network, with no gatekeeper in between. From there, HMIs are the highest-value target — they command the PLCs that control physical equipment, so a compromised corporate workstation could give an attacker a direct path to manipulating real physical processes, not just stealing data.
 
 ## What I'd Do Differently in Production
 - This is a conceptual/simplified mapping. A real OT security assessment 
