@@ -15,7 +15,7 @@ scanning, patching cadence, exploitation testing) that are safe in IT can
 cause physical safety incidents in OT. This project demonstrates that 
 judgment before I have OT hardware access.
 
-# Companion project: [IT/OT Segmentation & Scanning Risk Writeup](https://github.com/carmelin-neto/ot-active-scanning-risk) — why crossing these boundaries carelessly is dangerous.*
+# Companion project: [IT/OT Segmentation & Scanning Risk Writeup](https://github.com/carmelin-neto/ot-active-scanning-risk) — why crossing these boundaries carelessly is dangerous.
 
 ## Environment / Tools
 - Draw.io (or similar) for the architecture diagram
