@@ -16,6 +16,7 @@ cause physical safety incidents in OT. This project demonstrates that
 judgment before I have OT hardware access.
 
 # Companion project: [IT/OT Segmentation & Scanning Risk Writeup](https://github.com/carmelin-neto/ot-active-scanning-risk) — why crossing these boundaries carelessly is dangerous.
+*Related project: [ICS Modbus Attack Testing](https://github.com/carmelin-neto/ics-modbus-attack-testing) — hands-on testing of write-protection and ARP spoofing against the segmentation described here.*
 
 ## Environment / Tools
 - Draw.io (or similar) for the architecture diagram
