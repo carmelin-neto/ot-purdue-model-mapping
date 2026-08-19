@@ -34,8 +34,11 @@ judgment before I have OT hardware access.
    boundary and explained its purpose.
 3. Applied IEC 62443 zone/conduit terminology to define trust boundaries 
    between zones.
-4. Built a companion IT-side topology in Packet Tracer showing VLAN 
-   segmentation and ACLs enforcing the Level 3.5 DMZ boundary.
+ 4. Built and tested a companion IT-side topology in Cisco Packet Tracer — 
+   3 zones (IT, DMZ, OT) on separate switches connected to a router, with 
+   an extended ACL enforcing the Level 3.5 DMZ boundary by explicitly 
+   denying direct IT-to-OT traffic while permitting traffic through the DMZ.  
+    
 
 ## Findings / Key Design Decisions
 - The Level 3.5 Industrial DMZ enforces a strict one-way data flow: Level 3 (OT) pushes replicated data out to the DMZ, and Level 4 (IT) retrieves it from there — the two levels never open a direct session with each other. The critical design choice isn't just that OT can push out, but that the DMZ is never permitted to push into OT. If the DMZ could initiate a connection back into the control network, that would require an access point on the OT side for it to connect through — and that access point is exactly what an attacker would need. Because that access point simply doesn't exist, even a fully compromised DMZ leaves an attacker with nowhere further to go: no path, no way in.
@@ -50,4 +53,8 @@ Without this boundary, the IT/OT line disappears entirely. A single phishing cli
   in any change to the environment.
 
 ## Screenshots
-[https://github.com/carmelin-neto/ot-purdue-model-mapping/blob/main/screenshots/purdue-model-oilgas..drawio.png, packet-tracer-topology.png]
+![Purdue Model Diagram](screenshots/purdue-model-oilgas..drawio.png)
+![Packet Tracer Topology](screenshots/packet-tracer-topology.png)
+![IT-to-OT traffic blocked by ACL](screenshots/ping-blocked-it-to-ot.png)
+![Traffic still flows correctly through the DMZ](screenshots/ping-success-via-dmz.png)
+![ACL rule verification on the router](screenshots/acl-verification.png)
