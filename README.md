@@ -17,8 +17,7 @@ judgment before I have OT hardware access.
 
 # Companion project: [IT/OT Segmentation & Scanning Risk Writeup](https://github.com/carmelin-neto/ot-active-scanning-risk) — why crossing these boundaries carelessly is dangerous.
 *Related project: [ICS Modbus Attack Testing](https://github.com/carmelin-neto/ics-modbus-attack-testing) — hands-on testing of write-protection and ARP spoofing against the segmentation described here.*
-
-This segmentation design is the foundation referenced in my [github.com/carmelin-neto/ot-incident-response-scenario] — the ACL enforced here is what contains the attack in both.
+This segmentation design is the foundation referenced in my Incident Response scenario and ICS attack testing — the ACL enforced here is what contains the attack in both.
 
 ## Environment / Tools
 - Draw.io (or similar) for the architecture diagram
