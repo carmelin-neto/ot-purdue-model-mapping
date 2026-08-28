@@ -20,6 +20,7 @@ judgment before I have OT hardware access.
 This segmentation design is the foundation referenced in my [ot-incident-response-scenario](https://github.com/carmelin-neto/ot-incident-response-scenario) and [ics-modbus-attack-testing](https://github.com/carmelin-neto/ics-modbus-attack-testing) — the ACL enforced here is what contains the attack in both.
 
 This segmentation design is assessed for risk in [ot-risk-assessment](https://github.com/carmelin-neto/ot-risk-assessment) and scanned in [ot-vulnerability-assessment](https://github.com/carmelin-neto/ot-vulnerability-assessment) — both build directly on the ACL enforced here.
+This segmentation is the network-layer foundation for [ot-access-control-design](https://github.com/carmelin-neto/ot-access-control-design) — the RBAC layer that governs what happens after traffic legitimately reaches this network.
 
 ## Environment / Tools
 - Draw.io (or similar) for the architecture diagram
