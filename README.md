@@ -62,3 +62,9 @@ Without this boundary, the IT/OT line disappears entirely. A single phishing cli
 ![IT-to-OT traffic blocked by ACL](screenshots/ping-blocked-it-to-ot.png)
 ![Traffic still flows correctly through the DMZ](screenshots/ping-success-via-dmz.png)
 ![ACL rule verification on the router](screenshots/acl-verification.png)
+
+---
+
+## More From This Portfolio
+
+All nine projects: [carmelin-neto.github.io](https://carmelin-neto.github.io) · [GitHub profile](https://github.com/carmelin-neto)
